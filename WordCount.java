@@ -22,8 +22,13 @@ public class WordCount {
     public void map(Object key, Text value, Context context) throws IOException, InterruptedException {
       StringTokenizer itr = new StringTokenizer(value.toString());
       while (itr.hasMoreTokens()) {
-        word.set(itr.nextToken());
-        context.write(word, one);
+        var inputStr = itr.nextToken();
+        inputStr = inputStr.replaceAll("[,\\.\\(\\);:!?]", "");
+        inputStr = inputStr.replaceAll("\\d", "");
+        if (!inputStr.trim().isEmpty()) {
+          word.set(inputStr);
+          context.write(word, one);
+        }
       }
     }
   }
