@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/zhanbolat/Downloads/hadoop-client-3.3.4-sources.jar",
+        "/home/zhanbolat/Downloads/hadoop-mapreduce-client-core-3.3.4-sources.jar"
+    ]
+}
