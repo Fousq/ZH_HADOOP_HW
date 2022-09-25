@@ -22,4 +22,4 @@
 2. Delete dir(otherwise error): hdfs dfs -rmr /user/zhanbolat/sort/output
 3. Compile class: hadoop com.sun.tools.javac.Main SortWordCountJob.java
 4. Build JAR: jar cf sort_wc.jar SortWordCountJob*.class
-5. Run JOB: hadoop jar sort_wc.jar WordCount /user/zhanbolat/sort/input /user/zhanbolat/sort/output
+5. Run JOB: hadoop jar sort_wc.jar SortWordCountJob /user/zhanbolat/sort/input /user/zhanbolat/sort/output
